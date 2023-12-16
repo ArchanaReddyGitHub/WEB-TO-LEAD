@@ -8,6 +8,7 @@
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="script.js"></script>
     
+    
 </head>
 <body>
   
@@ -18,7 +19,9 @@
         method="POST" 
         onsubmit="beforesubmit(event)"
         />
-        <input type=hidden name='captcha_settings' 
+        <input 
+        type=hidden 
+        name='captcha_settings' 
         value='{"keyname":"WebToLead","fallback":"true","orgId":"00D5g000001GhsT","ts":""}'>
 
         <input type=hidden name="oid" value="00D5g000001GhsT"/>
@@ -26,7 +29,7 @@
         <input 
         type=hidden 
         name="retURL" 
-        value="https://archanareddygithub.github.io/WEB-TO-LEAD/"
+        value="https://archanareddygithub.github.io/WEB-TO-LEAD/thanks.html"
         />
         <input 
         type=hidden name="Lead_Date__c" class="outputdate"/>
@@ -39,7 +42,7 @@
     size="20" 
     type="text" 
     required="true"
-    /><br>
+    /><br/>
     
     <label for="last_name">Last Name</label>
     <input  
@@ -73,6 +76,7 @@
     
     <div 
         class="g-recaptcha" 
+        data-callback="captchasuccess"
         data-sitekey="6Ld7pjEpAAAAAAxYAKNCmP90K-jxI2Mb2lS1WSRd">
     </div><br>
 
